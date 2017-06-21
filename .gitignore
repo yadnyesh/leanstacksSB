@@ -1,0 +1,9 @@
+RemoteSystemsTempFiles/*
+skeleton-web-services.iml
+target/classes/*
+.classpath
+.idea/*
+.metadata/*
+.project
+.settings/*
+tgt-ca-bundle.crt
