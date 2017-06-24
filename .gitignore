@@ -1,6 +1,6 @@
 RemoteSystemsTempFiles/*
 skeleton-web-services.iml
-target/classes/*
+target/*
 .classpath
 .idea/*
 .metadata/*
