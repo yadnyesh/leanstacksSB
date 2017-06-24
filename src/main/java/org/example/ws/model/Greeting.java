@@ -6,10 +6,10 @@ import java.math.BigInteger;
  * Created by z063407 on 6/21/17.
  */
 public class Greeting {
-    private BigInteger id;
+    private Long id;
     private String text;
 
-    public Greeting(BigInteger id, String text) {
+    public Greeting(Long id, String text) {
         this.id = id;
         this.text = text;
     }
@@ -17,11 +17,11 @@ public class Greeting {
     public Greeting() {
     }
 
-    public BigInteger getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(BigInteger id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
