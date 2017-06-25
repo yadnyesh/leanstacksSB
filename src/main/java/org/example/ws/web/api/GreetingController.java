@@ -26,7 +26,8 @@ public class GreetingController {
     @Autowired
     private GreetingService greetingService;
 
-    private static final Logger logger = Logger.getLogger(GreetingController.class.getName());
+    //private static final Logger logger = Logger.getLogger(GreetingController.class.getName());
+    private Logger logger = Logger.getLogger(this.getClass().getName());
 
     @RequestMapping(value = "/api/greetings", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Collection<Greeting>> getGreetings() {
