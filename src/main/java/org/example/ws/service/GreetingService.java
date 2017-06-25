@@ -19,5 +19,6 @@ public interface GreetingService {
 
     void delete(Long id);
 
+    void evictCache();
 
 }
