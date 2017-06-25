@@ -31,7 +31,7 @@ public class GreetingBatchBean {
         logger.info("<< cronjob <<");
     }
 
-    @Scheduled (initialDelay = 5000, fixedRate = 15000)
+    //@Scheduled (initialDelay = 5000, fixedRate = 15000)
     public void fixedRateJobWithInitialDelay() {
         logger.info(">>> fixedRateJobWithInitialDelay >>>");
 
@@ -48,7 +48,7 @@ public class GreetingBatchBean {
         logger.info("<<< fixedRateJobWithInitialDelay <<<");
     }
 
-    @Scheduled (initialDelay = 5000, fixedDelay = 15000)
+    //@Scheduled (initialDelay = 5000, fixedDelay = 15000)
     public void fixedDelayJobWithInitialDelay() {
         logger.info(">>> fixedDelayJobWithInitialDelay >>>");
 
