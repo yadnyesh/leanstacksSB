@@ -76,7 +76,7 @@ public class GreetingsControllerTest extends AbstractControllerTest {
 
     }
 
-    @Test
+    //@Test
     public void testCreateGreeting() throws Exception {
 
         String uri = "/api/greetings";

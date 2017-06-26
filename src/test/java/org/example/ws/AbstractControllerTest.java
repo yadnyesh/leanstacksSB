@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.ws.web.api.BaseController;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -41,4 +42,8 @@ public class AbstractControllerTest extends AbstractTest {
         ObjectMapper mapper = new ObjectMapper();
         return mapper.readValue(json, clazz);
     }
+
+    @Test
+    public void donothing(){}
+
 }

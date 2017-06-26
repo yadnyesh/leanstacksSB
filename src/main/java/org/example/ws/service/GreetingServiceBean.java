@@ -4,6 +4,7 @@ import org.example.ws.model.Greeting;
 import org.example.ws.repository.GreetingRepository;
 import org.hibernate.annotations.Cache;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.actuate.metrics.CounterService;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
@@ -25,13 +26,18 @@ public class GreetingServiceBean implements GreetingService {
     @Autowired
     private GreetingRepository greetingRepository;
 
+    @Autowired
+    private CounterService counterService;
+
     public Collection<Greeting> findAll() {
+        counterService.increment("method.invoked.greetingServiceBean.findAll");
         Collection<Greeting> greetings = greetingRepository.findAll();
         return greetings;
     }
 
     @Cacheable (value = "greetings", key = "#id")
     public Greeting findOne(Long id) {
+        counterService.increment("method.invoked.greetingServiceBean.findOne");
         Greeting greeting = greetingRepository.findOne(id);
         return greeting;
     }
